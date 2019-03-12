@@ -25,7 +25,8 @@ class StoreFormValidations extends FormRequest
     {
         return [
             'name' => 'required',
-            'email' => 'required',
+            //'email' => 'required',
+            'g-recaptcha-response' => 'required|captcha'
         ];
     }
     public function messages(){

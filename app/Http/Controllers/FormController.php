@@ -12,9 +12,6 @@ class FormController extends Controller
     }
 
     public function login(StoreFormValidations $request){
-    	$this->validate($request,[
-    		'name' => 'required',
-    		'email' => 'required',
-    	]);
+    	return $request->all();
     }
 }

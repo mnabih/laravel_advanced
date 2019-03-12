@@ -4,6 +4,12 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+	<script
+  src="http://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
 </head>
 <body>
 	<div class="container">
@@ -17,7 +23,7 @@
 					@endforeach
 				@endif
 
-				<form action="" method="post">
+				<form action="" method="post" id="form">
 					{{csrf_field()}}
 					
 					<div class="form-group">
@@ -27,12 +33,20 @@
 					<div class="form-group">
 						<input type="text" class="form-control" name="email" placeholder="Email">
 					</div>
+					@captcha
 					<input type="submit" class="btn btn-success">
 
 				</form>
 			</div>
 		</div>
 	</div>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+				//console.log('hi');
+				//$('#form').submit();
+		})
+	</script>
 	
 </body>
 </html>
