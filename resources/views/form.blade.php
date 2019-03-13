@@ -10,8 +10,12 @@
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
 
+  <link rel="stylesheet" href="{{asset('css/app.css')}}">
+  <meta name="csrf-token" content="{{ csrf_token() }}">
+
 </head>
 <body>
+	<div  id="app"></div>
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-offset-4 col-lg-4">
@@ -47,6 +51,7 @@
 				//$('#form').submit();
 		})
 	</script>
+	<script src="{{asset('js/app.js')}}"></script>
 	
 </body>
 </html>
