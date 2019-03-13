@@ -32,11 +32,11 @@
 						{{csrf_field()}}
 						
 						<div class="form-group">
-							<input type="text" class="form-control" name="name" placeholder="{{__('my.name')}}">
+							<input type="text" class="form-control" name="name" placeholder="{{__('my.name',['example' => ' محمد'])}}">
 						</div>
 
 						<div class="form-group">
-							<input type="text" class="form-control" name="email" placeholder="{{__('my.email')}}">
+							<input type="text" class="form-control" name="email" placeholder="{{__('my.email',['example' => 'm@m.m'])}}">
 						</div>
 						{{-- @captcha --}}
 						<input type="submit" class="btn btn-success">

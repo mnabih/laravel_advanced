@@ -4,7 +4,7 @@ return [
 
    
 
-    'name' => 'Name',
-    'email' => 'Email',
+    'name' => 'Name:example',
+    'email' => 'Email:example',
 
 ];

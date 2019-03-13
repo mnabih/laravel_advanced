@@ -4,7 +4,7 @@ return [
 
    
 
-    'name' => 'الاسم',
-    'email' => 'الايميل',
+    'name' => 'الاسم:example',
+    'email' => 'الايميل:example',
 
 ];
