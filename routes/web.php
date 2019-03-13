@@ -1,5 +1,8 @@
 <?php
 
+use App\Mail\sendMailMailable;
+use Illuminate\Support\Facades\Mail;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,3 +24,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/form/{lang?}', 'FormController@index')->name('form');
 Route::post('/form', 'FormController@login');
+
+Route::get('sendmail',function(){
+	Mail::to('m@m.m')->send(new sendMailMailable());
+});
