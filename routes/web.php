@@ -19,5 +19,5 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/form', 'FormController@index')->name('form');
+Route::get('/form/{lang?}', 'FormController@index')->name('form');
 Route::post('/form', 'FormController@login');
