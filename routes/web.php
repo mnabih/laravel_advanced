@@ -1,6 +1,7 @@
 <?php
 
 use App\Jobs\SendEmailJop;
+use App\Providers\TestEvent;
 
 
 /*
@@ -36,4 +37,9 @@ Route::get('sendmail',function(){
 
 
 	return "mail send success";
+});
+
+
+Route::get('event', function(){
+	event(new TestEvent('hello'));
 });
