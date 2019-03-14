@@ -41,5 +41,16 @@ Route::get('sendmail',function(){
 
 
 Route::get('event', function(){
+
 	event(new TestEvent('hello'));
+	
+});
+
+Route::get('sub',function(){
+	if (Gate::allows('sub', Auth::user())) {
+    // The current user can update the post...
+		return view('sub');
+	}else{
+		return 'You need to subscripe';
+	}
 });
